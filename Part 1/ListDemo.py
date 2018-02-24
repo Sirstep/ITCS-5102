@@ -2,6 +2,8 @@
 Manipulating lists
 '''
 
+
+# Prime number algorithm
 def isPrime(n):
     prime = True
     n1=2
@@ -19,12 +21,14 @@ def getPrimeNumbers(list):
             list1.append(element)
     return list1
 
+
+# Merge Sort Algorithm
 def mergeSort(list):
     if(len(list) <= 1):
         return list
     else:
-        return merge(mergeSort(list[0:len(list)//2]),
-                 mergeSort(list[len(list)//2 + 1:len(list) - 1]))
+        return merge(mergeSort(list[:len(list)//2]),
+                 mergeSort(list[len(list)//2:]))
 
 def merge(list1, list2):
     mergedList=[];i=0;j=0
@@ -43,6 +47,8 @@ def merge(list1, list2):
         j=j+1
     return mergedList
 
+
+# Start the execution
 list=[8, 17, 96, 67, 83, 5, 11, 49, 79]
 x=0
 
